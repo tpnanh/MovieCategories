@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_select"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/label_select"
+        android:textSize="@dimen/font_size_18_sp"
+        android:layout_marginTop="@dimen/space_40_dp"
+        android:layout_marginHorizontal="@dimen/space_40_dp"/>
+
+    <Spinner
+        android:id="@+id/spinner_add_movie"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_10_dp"
+        android:layout_marginHorizontal="@dimen/space_40_dp"
+        />
+
+    <EditText
+        android:id="@+id/et_add_movie"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_20_dp"
+        android:layout_marginHorizontal="@dimen/space_40_dp"
+        android:inputType="text"
+        android:hint="@string/label_movie_name"
+        android:singleLine="true"
+        android:lines="1"
+        />
+
+    <Button
+        android:id="@+id/btn_add_movie"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_40_dp"
+        android:layout_gravity="center"
+        android:text="@string/label_add"
+        android:background="@drawable/my_custom_button"
+        android:textAllCaps="false"
+        android:textSize="@dimen/font_size_18_sp"
+        />
+
+    <Button
+        android:id="@+id/btn_show"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_20_dp"
+        android:layout_gravity="center"
+        android:text="@string/label_finish"
+        android:background="@drawable/my_custom_button"
+        android:textAllCaps="false"
+        android:textSize="@dimen/font_size_18_sp"/>
+
+</LinearLayout>

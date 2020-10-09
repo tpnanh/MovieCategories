@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:id="@+id/linearLayoutAddCategories"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/btn_add_categories_movie"
+        android:orientation="horizontal"
+        android:padding="@dimen/space_20_dp"
+        >
+
+        <EditText
+            android:id="@+id/et_movie_categories"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_marginEnd="@dimen/space_20_dp"
+            android:hint="@string/label_movie_categories"
+            android:inputType="text"
+            android:singleLine="true"
+            android:lines="1"
+            tools:ignore="InefficientWeight" />
+
+        <Button
+            android:id="@+id/btn_add_categories"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="@string/label_add"
+            android:background="@drawable/my_custom_button"
+            android:textAllCaps="false"
+            android:textSize="@dimen/font_size_18_sp"
+            />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_add_categories_movie"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayoutAddCategories"
+        android:padding="@dimen/space_20_dp"
+        android:background="@drawable/my_custom_button"
+        android:text="@string/label_add_movie"
+        android:textAllCaps="false"
+        android:textSize="@dimen/font_size_18_sp"
+         />
+</androidx.constraintlayout.widget.ConstraintLayout>

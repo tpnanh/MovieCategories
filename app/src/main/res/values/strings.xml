@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Movie Categories</string>
+
+    <string name="label_add">Add</string>
+    <string name="label_show">Show</string>
+    <string name="label_movie_categories">Movie Categories</string>
+    <string name="label_add_movie">Add Movie</string>
+    <string name="label_select">Select</string>
+    <string name="label_finish">Finish</string>
+    <string name="label_movie_name">Movie Name</string>
+    <string name="label_search">Search</string>
+    <string name="label_result">Result</string>
+</resources>
