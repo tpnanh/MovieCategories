@@ -7,7 +7,7 @@ import androidx.room.RoomDatabase
 import com.example.moviecategories.data.model.CategoryEntity
 import com.example.moviecategories.data.model.MovieEntity
 
-@Database(entities = [MovieEntity::class, CategoryEntity::class],version = 4)
+@Database(entities = [MovieEntity::class, CategoryEntity::class],version = 3)
 abstract class roomDatabase : RoomDatabase(){
     abstract val dao: DaoService
 }

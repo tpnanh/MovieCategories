@@ -25,5 +25,4 @@ class AddMovieViewModel(application: Application) : AndroidViewModel(application
             movieRepo.insertMovie(category,movie)
         }
     }
-
 }

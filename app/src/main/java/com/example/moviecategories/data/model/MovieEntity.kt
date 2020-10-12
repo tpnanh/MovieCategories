@@ -7,6 +7,6 @@ import androidx.room.PrimaryKey
 data class MovieEntity (
     @PrimaryKey(autoGenerate = true)
     var idMovie: Int,
-    var nameCategory: String,
+    var nameCategoryMovie: String,
     var nameMovie: String
 )

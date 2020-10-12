@@ -18,10 +18,16 @@ interface DaoService {
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     fun insertMovie(movie: MovieEntity)
+
+    @Query("select * from movie_table ORDER BY nameMovie ASC")
+    fun getAllMovies(): LiveData<List<MovieEntity>>
+
+    @Query("select * from movie_table,categories_table WHERE nameCategory = :category and nameCategoryMovie = nameCategory ")
+    fun getMovieByCategory(category: String): List<MovieEntity>
 //
-//    @Query("select * from MovieEntity")
-//    fun getAllMovies(): LiveData<MutableList<MovieEntity>>
-//
-//    @Query("select nameMovie from MovieEntity WHERE nameCategory = :category")
-//    fun getMovieByCategory(category: String): List<MovieEntity>
+//    @Query("select * from movie_table,categories_table WHERE nameMovie LIKE '%key%'")
+//    fun getMovieByKey(key: String): List<MovieEntity>
+
+//    @Query("select * from movie_table,categories_table WHERE nameMovie LIKE :key and nameCategory = :category and nameCategoryMovie = nameCategory")
+//    fun getMovieByCategoryAndKey(category: String, key: String): List<MovieEntity>
 }
