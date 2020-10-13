@@ -25,6 +25,7 @@ class MoviesActivity: AppCompatActivity(), View.OnClickListener, AdapterView.OnI
     private lateinit var spinnerText: String
 
     private lateinit var data : List<MovieEntity>
+    private lateinit var sort : List<MovieEntity>
 
     private lateinit var moviesViewModel: MoviesViewModel
     private lateinit var addMovieViewModel: AddMovieViewModel
@@ -72,6 +73,7 @@ class MoviesActivity: AppCompatActivity(), View.OnClickListener, AdapterView.OnI
 
         moviesViewModel.getAllMovies.observe(this, Observer { it ->
             data = it
+            sort = it.filter { item -> item.nameMovie.contains(et_movie_name.text.toString())  }
         })
 
         moviesViewModel.getMovieByCategory.observe(this, Observer { it ->
@@ -94,7 +96,7 @@ class MoviesActivity: AppCompatActivity(), View.OnClickListener, AdapterView.OnI
             moviesViewModel.getMovieByCategory(spinnerText)
         }
         else if (spinnerText == arrayCategories[0] && et_movie_name.text.toString() != ""){
-            moviesViewModel.getMovieByCategory("")
+            adapterMovie.submitList(sort)
         }
         else{
             moviesViewModel.getMovieByCategory(spinnerText)

@@ -17,6 +17,4 @@ class CategoryRepository(private val application: Application) {
             getDatabase(application).dao.insertCategory(myCategory)
         }
     }
-
-
 }

@@ -11,6 +11,7 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
+import com.example.moviecategories.MainActivity
 import com.example.moviecategories.R
 import com.example.moviecategories.viewModel.AddMovieViewModel
 import kotlinx.android.synthetic.main.activity_add_movie.*
@@ -46,7 +47,7 @@ class AddMovieActivity: AppCompatActivity(), View.OnClickListener, AdapterView.O
         spinnerText = ""
 
         btn_add_movie.setOnClickListener(this)
-
+        btn_finish.setOnClickListener(this)
     }
 
     private fun setUpViewModel() {
@@ -63,7 +64,13 @@ class AddMovieActivity: AppCompatActivity(), View.OnClickListener, AdapterView.O
 
     override fun onClick(view: View?) {
         when(view){
+            //click to add movie to room
             btn_add_movie -> addMovie()
+            //navigate to main activity
+            btn_finish -> {
+                startActivity(MainActivity.newIntent(this))
+                finish()
+            }
         }
     }
 
@@ -81,7 +88,7 @@ class AddMovieActivity: AppCompatActivity(), View.OnClickListener, AdapterView.O
     }
 
     override fun onNothingSelected(parent: AdapterView<*>?) {
-        TODO("Not yet implemented")
+
     }
 
     override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {

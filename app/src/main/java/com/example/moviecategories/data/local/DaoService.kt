@@ -24,10 +24,4 @@ interface DaoService {
 
     @Query("select * from movie_table,categories_table WHERE nameCategory = :category and nameCategoryMovie = nameCategory ")
     fun getMovieByCategory(category: String): List<MovieEntity>
-//
-//    @Query("select * from movie_table,categories_table WHERE nameMovie LIKE '%key%'")
-//    fun getMovieByKey(key: String): List<MovieEntity>
-
-//    @Query("select * from movie_table,categories_table WHERE nameMovie LIKE :key and nameCategory = :category and nameCategoryMovie = nameCategory")
-//    fun getMovieByCategoryAndKey(category: String, key: String): List<MovieEntity>
 }
